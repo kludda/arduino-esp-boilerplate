@@ -16,10 +16,12 @@ GUI / connectivity
 - [ ] MQTT subscribe
 
 Software
+- [x] Serial monitor debug levels
 - [ ] Variables persistant on reboot
 - [ ] WDT
 
 Hardware I/O
+- [x] Built-in LED
 - [ ] PWM out
 - [ ] Trigger in
 - [ ] I2C
