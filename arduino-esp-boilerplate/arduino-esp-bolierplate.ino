@@ -8,22 +8,22 @@
 
 // Serial monitor debug messages levels ---------------------
 
-#define SERIAL_MONITOR_DEBUG_VERBOSE_LEVEL -1 // -1 for off, 0 warning, 1 error, 2 info
+#define DEBUG_VERBOSE_LEVEL -1 // -1 for off, 0 warning, 1 error, 2 info
 
-#if SERIAL_MONITOR_DEBUG_VERBOSE_LEVEL >= 0
-#define SERIAL_MONITOR_WARN( print_arg ) print_arg
+#if DEBUG_VERBOSE_LEVEL >= 0
+#define DEBUG_WARN( print_arg ) print_arg
 #else
-#define SERIAL_MONITOR_WARN( print_arg )
+#define DEBUG_WARN( print_arg )
 #endif
-#if SERIAL_MONITOR_DEBUG_VERBOSE_LEVEL >= 1
-#define SERIAL_MONITOR_ERROR( print_arg ) print_arg
+#if DEBUG_VERBOSE_LEVEL >= 1
+#define DEBUG_ERROR( print_arg ) print_arg
 #else
-#define SERIAL_MONITOR_ERROR( print_arg )
+#define DEBUG_ERROR( print_arg )
 #endif
-#if SERIAL_MONITOR_DEBUG_VERBOSE_LEVEL >= 2
-#define SERIAL_MONITOR_INFO( print_arg ) print_arg
+#if DEBUG_VERBOSE_LEVEL >= 2
+#define DEBUG_INFO( print_arg ) print_arg
 #else
-#define SERIAL_MONITOR_INFO( print_arg )
+#define DEBUG_INFO( print_arg )
 #endif
 
 
@@ -50,7 +50,7 @@ void setup() {
   delay(1000); // some microcontrollers reboot twice
   Serial.begin(115200);
   while (! Serial); // Wait until Serial is ready
-  SERIAL_MONITOR_INFO( Serial.println("Serial monitor started.") );
+  DEBUG_INFO( Serial.println("Serial monitor started.") );
   
   
   // initialize built-in LED as an output
@@ -59,7 +59,7 @@ void setup() {
   
   // The power needs to be reduced for the Node MCU to connect to the wifi.
   // WiFi.setOutputPower(17.5); 
-  // SERIAL_MONITOR_INFO( Serial.println("WiFi output power reduced to 17.5.") );
+  // DEBUG_INFO( Serial.println("WiFi output power reduced to 17.5.") );
   
 }
 
