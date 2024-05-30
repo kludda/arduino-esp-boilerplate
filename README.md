@@ -19,6 +19,7 @@ Software
 - [x] Serial monitor debug levels
 - [ ] Variables persistant on reboot
 - [ ] WDT
+- [ ] NTP
 
 Hardware I/O
 - [x] Built-in LED
